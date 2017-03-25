@@ -56,7 +56,8 @@ class EDD_API_Model_Sale extends EDD_API_Model {
 
 		if ( ! empty( $this->products ) ) {
 			foreach ( $this->products as $key => $product ) {
-				$this->products[ $key ] = new EDD_API_Model_Product( $product );
+				// TODO Currently EDD API doesn't return a full product model, and the keys are incorrect.
+				//$this->products[ $key ] = new EDD_API_Model_Product( $product );
 			}
 		}
 	}
