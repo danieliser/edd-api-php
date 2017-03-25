@@ -15,7 +15,7 @@ Check out the following sample code to get you started. Read the Easy Digital Do
     /**
      * Call our own instance of the edd_api.
      */
-    function _edd_api() {
+    function my_edd_api() {
         return edd_api( array(
             'url' => EDD_API_URL,
             'key' => EDD_API_KEY,
@@ -27,7 +27,7 @@ Check out the following sample code to get you started. Read the Easy Digital Do
      * Get products from the api and render them with category & earnings.
      */
     function _render_products_with_total_earnings( $number = -1 ) {
-        $products = _edd_api()->get_products( array( 'number' => $number ) );
+        $products = my_edd_api()->get_products( array( 'number' => $number ) );
     
         foreach ( $products as $product ) {
             /**
