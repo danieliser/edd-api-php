@@ -13,15 +13,11 @@ class EDD_API_Wrapper {
 	 * @param array $api
 	 */
 	public function __construct( $api = array() ) {
-		$api = wp_parse_args( $api, array(
-			'url'   => defined( 'EDD_API_URL' ) ? EDD_API_URL : '',
-			'key'   => defined( 'EDD_API_KEY' ) ? EDD_API_KEY : '',
-			'token' => defined( 'EDD_API_TOKEN' ) ? EDD_API_TOKEN : '',
+		$this->api = wp_parse_args( $api, array(
+			'url'   => '',
+			'key'   => '',
+			'token' => '',
 		) );
-
-		$this->api = $api;
-
-		return $this;
 	}
 
 	/**
