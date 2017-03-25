@@ -16,6 +16,9 @@ class EDD_API_Model {
 		return $this;
 	}
 
+	/**
+	 * @param array $data
+	 */
 	public function set_properties( $data = array() ) {
 		foreach ( $data as $key => $val ) {
 			if ( property_exists( $this, $key ) ) {

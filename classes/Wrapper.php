@@ -5,6 +5,9 @@
  */
 class EDD_API_Wrapper {
 
+	/**
+	 * @var array
+	 */
 	private $api;
 
 	/**
@@ -113,8 +116,8 @@ class EDD_API_Wrapper {
 
 		if ( ! empty( $args['startdate'] ) || ! empty( $args['enddate'] ) ) {
 			$args['date'] = 'range';
-		} else if ( ! in_array( $args['data'], array( 'today', 'yesterday', 'range' ) ) ) {
-			$args['data'] = null;
+		} else if ( ! in_array( $args['date'], array( 'today', 'yesterday', 'range' ) ) ) {
+			$args['date'] = null;
 		}
 
 		$request = $this->call_api( 'customers', $args );
@@ -156,6 +159,7 @@ class EDD_API_Wrapper {
 	}
 
 	/**
+	 * @param $product
 	 * @param array $args
 	 *
 	 * @return array|bool|mixed|object
@@ -273,7 +277,7 @@ class EDD_API_Wrapper {
 		// product & date options cannot be combined.
 		$args = wp_parse_args( $args, array(
 			// Accepts sales or earnings.
-			'type'      => null,
+			'type'      => $type,
 			//  The date to retrieve earnings or sales for. This has three accepted values: today, yesterday & range.
 			'date'      => null,
 			// Format: YYYYMMDD. Example: 20120224 = 2012/02/24
@@ -290,8 +294,8 @@ class EDD_API_Wrapper {
 
 		if ( ! empty( $args['startdate'] ) || ! empty( $args['enddate'] ) ) {
 			$args['date'] = 'range';
-		} else if ( ! in_array( $args['data'], array( 'today', 'yesterday', 'range' ) ) ) {
-			$args['data'] = null;
+		} else if ( ! in_array( $args['date'], array( 'today', 'yesterday', 'range' ) ) ) {
+			$args['date'] = null;
 		}
 
 		$request = $this->call_api( 'stats', $args );

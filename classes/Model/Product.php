@@ -143,8 +143,8 @@ class EDD_API_Model_Product extends EDD_API_Model {
 		}
 
 		if ( ! empty( $this->stats ) ) {
-			foreach ( $this->stats as $prefix => $vals ) {
-				foreach ( $vals as $key => $val ) {
+			foreach ( $this->stats as $prefix => $values ) {
+				foreach ( $values as $key => $val ) {
 					$key        = "{$prefix}_{$key}";
 					$this->$key = $val;
 				}

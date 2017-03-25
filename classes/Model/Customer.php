@@ -14,28 +14,64 @@ class EDD_API_Model_Customer extends EDD_API_Model {
 	 */
 	public $stats;
 
+	/**
+	 * @var
+	 */
 	public $customer_id;
 
+	/**
+	 * @var
+	 */
 	public $user_id;
 
+	/**
+	 * @var
+	 */
 	public $username;
 
+	/**
+	 * @var
+	 */
 	public $display_name;
 
+	/**
+	 * @var
+	 */
 	public $first_name;
 
+	/**
+	 * @var
+	 */
 	public $last_name;
 
+	/**
+	 * @var
+	 */
 	public $email;
 
+	/**
+	 * @var
+	 */
 	public $additional_emails;
 
+	/**
+	 * @var
+	 */
 	public $date_created;
 
+	/**
+	 * @var
+	 */
 	public $total_purchases;
 
+	/**
+	 * @var
+	 */
 	public $total_spent;
 
+	/**
+	 * @var
+	 */
 	public $total_downloads;
 
 	/**
@@ -55,6 +91,9 @@ class EDD_API_Model_Customer extends EDD_API_Model {
 		}
 	}
 
+	/**
+	 *
+	 */
 	public function get_purchases() {
 		//edd_api()->get_purchases( $this->customer_id );
 	}

@@ -38,10 +38,12 @@ spl_autoload_register( 'edd_api_sdk_autoloader' ); // Register autoloader
 require_once ( 'non-wp-compat.php' );
 
 /**
+ * @param array $api
+ *
  * @return EDD_API_Wrapper
  */
-function edd_api( $creds = null ) {
-	return EDD_API_Wrapper::instance();
+function edd_api( $api = array() ) {
+	return EDD_API_Wrapper::instance( $api );
 }
 
 

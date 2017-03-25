@@ -9,7 +9,7 @@ Check out the following sample code to get you started. Read the Easy Digital Do
      */
      if ( ! function_exists( 'edd_api' ) ) {
         // Load the sdk.
-        require_once( 'edd-api-sdk/edd-api-sdk.php' );
+        require_once( 'edd-api-php/start.php' );
     }
     
     /**
